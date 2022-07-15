@@ -40,15 +40,15 @@ $(document).ready(function () {
 //ajax ->jqajax 
 //
 
-$.ajax({
-    type: "method",
-    url: "url",
-    data: "data",
+// $.ajax({
+//     type: "method",
+//     url: "url",
+//     data: "data",
     
-    success: function (response) {
+//     success: function (response) {
         
-    }
-});
+//     }
+// });
 
 //variable store response->if loop to check status 200 -> form reset -> msg
 
