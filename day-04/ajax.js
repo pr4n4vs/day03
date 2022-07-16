@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+    //Insert
     $('#btn-submit').on('click',function () { 
         // $('#btn-submit').attr("disabled","disabled");
         var name=$('#name').val();
@@ -19,6 +21,7 @@ $(document).ready(function () {
                         $('#form')[0].reset();//form reset 
                         //$('#btn-submit').removeAttr("disabled");
                         alertify.success("Data Inserted");
+                        view();
                     }
                     else{
                         alertify.error('not inserted');
@@ -32,7 +35,28 @@ $(document).ready(function () {
         }
        // $('#btn-submit').removeAttr("disabled");
     });
+
+
+
+    //view
+    function view() {
+        $.ajax({
+            type: "POST",
+            url: "ajax.php",
+            data: {
+                type:2
+            },
+            
+            success: function (response) {
+               $('#data').html(response);
+            }
+        });
+      }
 });
+
+
+//update
+
 
 //jquery doc.ready function => jqdoc -> auto call function like constructor
 // we have alery an form then we defined id for alll the elements in the form including submit and form tag

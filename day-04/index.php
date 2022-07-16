@@ -32,7 +32,7 @@ required -> complusry file
                 <input type="number" class="form-control" name="age" id="age">
             </div>
             
-            <button  name="submit" id="btn-submit" class="btn btn-primary">Submit</button>
+            <button type="button" name="submit"  id="btn-submit" class="btn btn-primary">Submit</button>
         </form>
 
 
@@ -46,7 +46,7 @@ required -> complusry file
               <th scope="col">Action</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="data">
             <?php
             $result=view();
             if(mysqli_num_rows($result)==0){
